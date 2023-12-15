@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload a Video</title>
+    c<style>
+        body {
+            background-image: url('/static/background.png');
+            background-size: cover;  /* 이미지가 전체 화면을 커버하도록 설정 */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upload-container {
+            width: 300px;
+            padding: 20px;
+            background-color: white;  /* 배경색을 흰색으로 설정 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+            text-align: center;  /* 텍스트 중앙 정렬 */
+            border-radius: 10px;  /* 모서리 둥글게 */
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Video Upload</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
