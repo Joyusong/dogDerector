@@ -5,7 +5,8 @@ import numpy as np
 import cv2
 import tensorflow as tf
 from predict_model import video_predict
-sess = tf.compat 
+sess = tf.compat.v1.Session()
+sess.run(tf.cl
 app = Flask(__name__)
 os.environ['TF_VERSION'] = '2.15.0'
 def predict_video(video):

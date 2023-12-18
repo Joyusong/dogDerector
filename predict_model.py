@@ -116,6 +116,7 @@ def video_predict(video_name):
                 print(i+1, "tag: " , labels[index[0][-(i+1)]])
                 print()
             """
-            result.append(labels[index[0][-1]])
+            if labels[index[0][-1]] not in result:
+                result.append(labels[index[0][-1]])
     return result
-
+print(video_predict("test.mp4"))
